@@ -501,7 +501,34 @@ header img {
     }
 }
 
+@media print {
+    body {
+        margin: 0.5in;
+        font-family: serif; 
+    }
 
+    img {
+        display: none; 
+    }
+
+    nav {
+        display: none;
+    }
+
+    a::after {
+        content: " (" attr(href) ")";
+        color: black; 
+    }
+
+    body {
+        max-height: 100vh;
+        overflow: hidden;
+    }
+
+    h1, h2, h3, p, li {
+        font-size: smaller;
+    }
+}
 
 
 
